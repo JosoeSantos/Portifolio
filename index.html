@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>
+    Boga
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Antic+Slab|Domine" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+          integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <img class="logo" src="svg/assinatura.svg" alt="Assinatura"/>
+    <ul>
+      <li><a href="#trabalhos">Trabalhos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+  <header class="presentation-header">
+    <img class="background"
+         src="img/wallpaper.png"
+         alt="lampada simbolo de criatividade">
+    <h1>Me contrata na moral?</h1>
+  </header>
+</header>
+<main id="content">
+  <h2>Eai, tudo bem?</h2>
+  <p>Olá sou Josoé Santos Queiroz, brasileiro, recém formado como
+    técnico em informática pelo Centro Federal de Educação
+    Tecnológica de Minas Gerais (CEFET-MG). Ao longo desse curso
+    participei de projetos importates na instituição sempre
+    tentando usa-los ao maximo para melhorar minhas habilidades como
+    desenvolvedor. Por isso uma boa experiência em
+    desenvolvimento de Single Page Aplications para web usando os
+    frameworks Agular e Vuejs. Atualmente estou me
+    preparando para ingressar em uma faculdade no segundo semestre de
+    2019. Contudo, com o objetivo de unir o útil ao
+    agradável pretendo obter um emprego exercendo a minha mais nova formação.
+  </p>
+  <section id="trabalhos">
+    <header>
+      <h2>Trabalhos</h2>
+    </header>
+    <ul class="work-list">
+      <li>
+        <a href="#">
+          <div class="trabalho">
+            <h4>Orientek</h4>
+            <img src="svg/ic-orientek.svg" alt="icone do Orientek">
+          </div>
+        </a>
+      </li>
+      <li>
+        <a>
+          <div class="trabalho">
+            <h4>Recicle</h4>
+            <img src="svg/ic-recicle.svg" alt="icone do Recicle">
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="trabalho">
+            <h4>Drug Discovery</h4>
+            <img src="img/ic-drug-dyscovery.png" alt="Logo do grupo Drug Discovery">
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section id="contato">
+    <h2>Contato</h2>
+    <form class="contact-form" name="contact" netlify>
+      <div class="input-field">
+        <input type="text" id="input-nome" name="nome" required>
+        <label for="input-nome">Nome</label>
+      </div>
+      <div class="input-field">
+        <input type="email" id="input-email" name="email" required>
+        <label for="input-email">Seu e-mail</label>
+      </div>
+      <div class="input-field">
+        <input type="text" id="input-assunto" name="assunto">
+        <label for="input-assunto">Assunto (opcional)</label>
+      </div>
+      <div class="input-field">
+        <textarea id="textarea-assunto" name="mensagem" required></textarea>
+        <label for="textarea-assunto">Mensagem</label>
+      </div>
+      <button type="submit" class="submit-btn" name="submit">ENVIAR</button>
+    </form>
+    <section class="mais-contatos">
+      <h5>Mais formas de contato</h5>
+      <div class="contatos">
+        <a href="malito: jssantosqueiroz@gmail.com" class="contact">
+          <i class="fas fa-at contact-icon"></i>
+          <span>jssantosqueiroz@gmail.com</span>
+        </a>
+        <a href="tel:+55 37 998324248" class="contact">
+          <i class="fas fa-phone contact-icon"></i>
+          <span>(37) 99832-4238</span>
+        </a>
+        <a href="https://twitter.com/JosoeQueiroz" target="_blank">
+          <i class="fab fa-twitter contact-icon"></i>
+          <span>@JosoeQueiroz</span>
+        </a>
+        <a href="https://www.linkedin.com/in/joso%C3%A9-santos-queiroz-77350217b/" target="_blank">
+          <i
+            class="fab fa-linkedin-in contact-icon "></i>
+          <span>Josoé Santos Queiroz</span>
+        </a>
+      </div>
+    </section>
+  </section>
+</main>
+<footer>
+  <nav class="footer-links">
+    <ul>
+      <li>
+        <a href="https://github.com/JosoeSantos/" target="_blank">
+          <i class="fab fa-github round-icon"></i>
+          <span>Visit me on GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://stackoverflow.com/users/7822107/josoe-santos" target="_blank">
+          <i class="fab fa-stack-overflow round-icon"></i>
+          <span>My Stack Overflow page</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-copyright container">&copy;2019 - Josoé Santos Queiroz</div>
+</footer>
+
+<script>
+let elems = document.querySelectorAll('input, textarea');
+window.onload = () => {
+  elems.forEach(checkEmpty)
+};
+
+function checkEmpty(elem) {
+  if (elem.value) {
+    if (elem.value.length > 0) {
+      if (!elem.classList.contains('not-empty-input'))
+        elem.classList.add('not-empty-input');
+      return
+    }
+  }
+  console.log('something');
+  if (elem.classList.contains('not-empty-input'))
+    elem.classList.remove('not-empty-input');
+  console.log(elem);
+}
+
+elems.forEach((elem) => {
+  elem.addEventListener('keyup', (ev) => checkEmpty(ev.target))
+})
+
+</script>
+</body>
+</html>

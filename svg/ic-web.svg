@@ -1,0 +1,13 @@
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <defs>
+        <style>
+            .cls-1{opacity:0.9;}.cls-2{fill:none;}.cls-2,.cls-3{stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:40px;}
+        </style>
+    </defs>
+    <title>icone-web</title>
+    <g class="cls-1">
+        <polyline class="cls-2" points="365.25 145 478.75 258.5 365.25 372"/>
+        <polyline class="cls-2" points="146.75 140 33.25 253.5 146.75 367"/>
+        <line class="cls-3" x1="195.75" y1="371" x2="312.75" y2="144"/>
+    </g>
+</svg>

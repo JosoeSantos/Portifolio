@@ -1,0 +1,11 @@
+{
+  "name": "portofolio",
+  "version": "1.0.0",
+  "description": "Meu portifólio pessoal",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "http-server"
+  },
+  "author": "jssantosqueiroz@gmail.com",
+  "license": "ISC"
+}
