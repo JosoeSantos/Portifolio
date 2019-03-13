@@ -58,6 +58,7 @@ q:before, q:after {
     --color-secondary-dark: #301810;
     --color-text-dark: #212121;
     --color-text-light: #fff;
+    --color-form-focus: #0d47a1;
 }
 
 table {
@@ -265,6 +266,7 @@ img.background {
     height: 100%;
     z-index: 0;
     object-fit: cover;
+    background-color: var(--color-primary-light);
 }
 
 #trabalhos {
@@ -339,7 +341,7 @@ img.background {
 
 .input-field > input:focus,
 .input-field > textarea:focus {
-    border-color: var(--color-secondary-light);
+    border-color: var(--color-form-focus);
 }
 
 textarea {
@@ -367,7 +369,7 @@ textarea {
     transform: translate(0, 0);
     font-size: 12px;
     padding: 4px;
-    color: var(--color-secondary-light);
+    color: var(--color-form-focus);
 }
 
 /*
