@@ -1,5 +1,17 @@
 let elems = document.querySelectorAll('input, textarea');
 window.onload = () => {
+  if ('serviceWorker' in navigator) {
+    console.log('trying to register worker');
+    navigator.serviceWorker.register('./service-worker.js', { scope: './' })
+      .then(function (reg) {
+        // registration worked
+        console.log('Registration succeeded. Scope is ' + reg.scope);
+      }).catch(function (error) {
+      // registration failed
+      console.log('Registration failed with ' + error);
+    });
+  }
+
   elems.forEach(checkEmpty)
 };
 
@@ -19,4 +31,4 @@ function checkEmpty(elem) {
 
 elems.forEach((elem) => {
   elem.addEventListener('keyup', (ev) => checkEmpty(ev.target))
-})
+});
