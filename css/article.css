@@ -1,0 +1,33 @@
+body > header > h1 {
+    margin: 2rem auto;
+    text-align: center;
+    vertical-align: center;
+}
+
+figure {
+    margin: 2rem;
+}
+
+figure > * {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+figure > figcaption {
+    margin-top: .7rem;
+}
+
+figure img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+@supports (initial-letter: 3) {
+    p:first-child::first-letter {
+        initial-letter: 3;
+        color: var(--color-primary-dark);
+    }
+}
+
+
