@@ -32,6 +32,8 @@ function update(request) {
   return caches.open(CACHE).then(function (cache) {
     return fetch(request).then(function (response) {
       return cache.put(request, response.clone()).then(function () {
+        console.log(response);
+        console.log('cached: ', request);
         return response;
       });
     });

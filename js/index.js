@@ -11,6 +11,14 @@ window.onload = () => {
       console.log('Registration failed with ' + error);
     });
   }
+  let hover = document.getElementById('hover-change');
+  hover.addEventListener('mouseover', () => {
+    hover.innerText = "site";
+  });
+
+  hover.addEventListener('mouseout', () => {
+    hover.innerText = "produto";
+  });
 
   elems.forEach(checkEmpty)
 };
