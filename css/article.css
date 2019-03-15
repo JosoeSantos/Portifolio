@@ -33,7 +33,7 @@ figure img {
 .gallery {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     grid-gap: 1rem;
 }
 
@@ -42,12 +42,31 @@ figure img {
     grid-row: 1/2;
 }
 
-.gallery figure {
-    max-width: 350px;
-    margin: 0;
+.gallery-figures {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
 }
 
-.gallery figure.col-2 {
-    max-width: 900px;
-    grid-column: span 2;
+.gallery-figures figure {
+    max-width: 350px;
+    margin: 0;
+    justify-self: center;
+    align-self: center;
+}
+
+@media screen and (min-width: 808px) {
+    .gallery-figures {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+    }
+
+    .gallery-figures figure.col-2 {
+        grid-column: span 2;
+    }
+}
+
+.gallery-figures figure.col-2 {
+    max-width: 100%;
 }
