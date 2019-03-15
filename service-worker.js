@@ -25,7 +25,7 @@ self.addEventListener('fetch', function (evt) {
 
 function fromCache(request) {
   caches.match(event.request).then(function (res) {
-    return res || requestBackend(event);
+    return res || requestBackend(res);
   })
 }
 
@@ -37,9 +37,8 @@ function requestBackend(event) {
     if (!res || res.status !== 200 || res.type !== 'basic') {
       return res;
     }
-
+    console.log(res.type);
     let response = res.clone();
-
     caches.open(CACHE_VERSION).then(function (cache) {
       cache.put(event.request, response);
     });
