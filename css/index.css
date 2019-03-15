@@ -108,6 +108,10 @@ main p {
     text-indent: 2.7rem;
 }
 
+main p + h3 {
+    padding: .3rem 1rem;
+    margin-top: 1rem;
+}
 a {
     text-decoration: none;
     color: var(--color-secondary-dark);
