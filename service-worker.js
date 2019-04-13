@@ -12,7 +12,7 @@ self.addEventListener('install', (event) => {
 
 
 self.addEventListener('fetch', function (evt) {
-  evt.respondWith(fromCache(evt) || fetch(evt.request));
+  evt.respondWith(fromCache(evt) || requestBackend(evt));
   evt.waitUntil(
     update(evt.request)
       .catch(err => console.warn(err))
@@ -22,7 +22,8 @@ self.addEventListener('fetch', function (evt) {
 
 function fromCache(event) {
   caches.match(event.request).then((res) => {
-    return res || requestBackend(event);
+    console.log(event.request.url);
+    return res || fetch(event.request);
   })
 }
 
